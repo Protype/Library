@@ -8,6 +8,8 @@
 - Github: 
 - Official Site: 
 
+### ⚖️ `MIT License`
+
 ## Quick Start
 
 #### Use NPM
@@ -20,7 +22,7 @@
 ```htmlmixed
 ```
 
-## 常用 Code
+## Usage
 
 :::info
 :::
