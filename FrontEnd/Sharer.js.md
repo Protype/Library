@@ -4,6 +4,8 @@
 
 ![](https://hackmd.io/_uploads/SJL60cWXI.png)
 
+### ⚖️ `MIT License`
+
 - Document: http://ellisonleao.github.io/sharer.js/
 - Github: https://github.com/ellisonleao/sharer.js/
 - Official Site: http://ellisonleao.github.io/sharer.js/
