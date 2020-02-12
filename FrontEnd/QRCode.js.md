@@ -16,7 +16,7 @@
 
 #### Use NPM
 
-這是由 llyys 所包裝的版本
+由 llyys 所包裝的版本
 
 ```shell
 npm install qrcodejs
@@ -24,8 +24,59 @@ npm install qrcodejs
 
 #### Fetch file
 
-```htmlmixed
+```shell
 wget https://raw.githubusercontent.com/davidshimjs/qrcodejs/master/qrcode.min.js -o qrcode.min.js
+```
+
+快速處理
+
+```htmlmixed
+<div id="qrcode"></div>
+```
+
+
+```javascript
+
+// QRCode
+var qr
+  , qrnode = $('#qrcode')
+  , imgnode = null
+  , qrurl = 'url'
+  , qrtimer = null
+  , qrcounter = 0
+  ;
+
+// Enable interval
+qrtimer = setInterval (qrcodeGenerator, 400);
+
+// QRCode generator
+function qrcodeGenerator () {
+
+  // 找看看 img node
+  if (! imgnode || imgnode.length <= 0)
+    imgnode = qrnode.find ('img');
+
+  // 最多等 10 次，或 img 確實產生了（src 不為空），結束 interval
+  if (++qrcounter > 10 || (imgnode && imgnode.length > 0 && imgnode.attr ('src') != '')) {
+    clearInterval (qrtimer);
+    return;
+  }
+
+  // 還沒產生 QRCode 的話，先產生
+  if (! qr) {
+    qr = new QRCode (qrnode[0], {
+      text: qrurl,
+      width: 200,
+      height: 200,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  }
+
+  // 每次都要求產生 qrcode
+  qr.makeCode (qrurl);
+}
 ```
 
 ## Usage
@@ -71,52 +122,6 @@ var qrcode = new QRCode (document.getElementById ("qrcode"), {
 ```javascript
 qrcode.clear(); // clear the code.
 qrcode.makeCode("http://naver.com"); // make another code.
-```
-
-針對自動產生 QRCode 失敗的處理方式
-
-```javascript
-
-// QRCode
-var qr
-  , qrnode = $('#qrcode')
-  , imgnode = null
-  , qrurl = 'url'
-  , qrtimer = null
-  , qrcounter = 0
-  ;
-
-// Enable interval
-qrtimer = setInterval (qrcodeGenerator, 400);
-
-// QRCode generator
-function qrcodeGenerator () {
-
-  // 找看看 img node
-  if (! imgnode || imgnode.length <= 0)
-    imgnode = qrnode.find ('img');
-
-  // 最多等 10 次，或 img 確實產生了（src 不為空），結束 interval
-  if (++qrcounter > 10 || (imgnode && imgnode.length > 0 && imgnode.attr ('src') != '')) {
-    clearInterval (qrtimer);
-    return;
-  }
-
-  // 還沒產生 QRCode 的話，先產生
-  if (! qr) {
-    qr = new QRCode (qrnode[0], {
-      text: qrurl,
-      width: 200,
-      height: 200,
-      colorDark : "#000000",
-      colorLight : "#ffffff",
-      correctLevel : QRCode.CorrectLevel.H
-    });
-  }
-
-  // 每次都要求產生 qrcode
-  qr.makeCode (qrurl);
-}
 ```
 
 ## Note & Experience
