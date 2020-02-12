@@ -1,6 +1,6 @@
 # 社群分享套件 Sharer.js
 
-###### tags: `FrontEnd` `JavaScript`
+###### tags: `FrontEnd` `JavaScript` `Share` `SocialMedia`
 
 ![](https://hackmd.io/_uploads/SJL60cWXI.png)
 
@@ -22,7 +22,7 @@ npm install sharer.js
 <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 ```
 
-## 常用 Code
+## Usage
 
 :::info
 💡Sharer.js 引入後會自動啟用對 **`data-sharer`** 作判斷，不需額外手動處理。
