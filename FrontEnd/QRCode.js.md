@@ -1,12 +1,17 @@
-# QRCode.js
+# QRCode 產生套件 QRCode.js
 
-###### tags: `FrontEnd` `QRCode`
+###### tags: `FrontEnd` `QRCode` `JavaScript`
 
-在 Github 上從 JavaScript 產生 QRCode 的相關工具裡，星星數最多的一個套件，從 2015 年就停止了維護並且似乎有不少 bug。
+### ⚖️ `MIT License`
+
+在 Github 上從 JavaScript 產生 QRCode 的相關工具裡，星星數最多的一個套件，但從 2015 年就停止了維護，並且似乎有不少 bug。
 
 - Document: https://github.com/davidshimjs/qrcodejs
 - Github: https://github.com/davidshimjs/qrcodejs
 - Official Site: https://github.com/davidshimjs/qrcodejs
+
+#### License
+
 
 ## Quick Start
 
