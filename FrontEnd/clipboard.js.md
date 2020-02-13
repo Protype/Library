@@ -4,11 +4,11 @@
 
 ![](https://hackmd.io/_uploads/BkOP76W7U.png)
 
+### ⚖️ `MIT License`
+
 - Document: https://clipboardjs.com
 - Github: https://github.com/zenorocha/clipboard.js/
 - Official Site: https://clipboardjs.com
-
-### ⚖️ `MIT License`
 
 ## Quick Start
 
